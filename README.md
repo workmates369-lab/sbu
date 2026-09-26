@@ -30,21 +30,19 @@ The system allows customers to browse products, search for items, add products t
 - Update order statuses
 - View basic sales information
 
----
 
 ## 3. System Design Flow
 
-```text
-                    ONLINE SPAZA SHOP
+             DigiTuck Online Ordering System 
                            |
               +------------+------------+
               |                         |
-          CUSTOMER                 ADMINISTRATOR
+       student/customers             Vendors 
               |                         |
        Register / Login              Login
               |                         |
               v                         v
-       Product Catalogue          Admin Dashboard
+       Product Catalogue          vendor's Dashboard
               |                         |
        Search Products       +---------+---------+
               |               |         |         |
@@ -70,7 +68,6 @@ The system allows customers to browse products, search for items, add products t
                            |
                            v
                   Customer Tracking
-```
 
 ---
 
@@ -78,7 +75,6 @@ The system allows customers to browse products, search for items, add products t
 
 The project follows an MVC + DAO architecture.
 
-```text
 +------------------------------+
 |       Java User Interface    |
 |          JavaFX              |
@@ -109,7 +105,6 @@ The project follows an MVC + DAO architecture.
 +------------------------------+
 |          MySQL DB            |
 +------------------------------+
-```
 
 ---
 
@@ -142,7 +137,6 @@ Provides JDBC connectivity between the Java application and MySQL.
 
 ### Users
 
-```text
 users
 ----------------
 user_id PK
@@ -155,16 +149,13 @@ role
 
 ### Categories
 
-```text
 categories
 ----------------
 category_id PK
 category_name
-```
 
 ### Products
 
-```text
 products
 ----------------
 product_id PK
@@ -174,11 +165,9 @@ description
 price
 stock_quantity
 availability
-```
 
 ### Orders
 
-```text
 orders
 ----------------
 order_id PK
@@ -189,8 +178,6 @@ status
 ```
 
 ### Order Items
-
-```text
 order_items
 ----------------
 order_item_id PK
@@ -203,7 +190,6 @@ subtotal
 
 ### Relationships
 
-```text
 USER 1 -------- MANY ORDERS
 
 ORDER 1 ------- MANY ORDER_ITEMS
@@ -232,7 +218,6 @@ CATEGORY 1 ---- MANY PRODUCTS
 
 ## 8. Recommended Project Structure
 
-```text
 SpazaExpress/
 |
 +-- README.md
@@ -286,7 +271,6 @@ SpazaExpress/
 
 ## 9. Order Processing Flow
 
-```text
 Customer Login
       |
       v
